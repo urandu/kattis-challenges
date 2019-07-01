@@ -9,11 +9,13 @@ goal = int(inputs[2])
 steps_right = int(inputs[3])
 steps_left = int(inputs[4])
 es = 0
-
+x = 0
 steps = 0
 while start != goal and es == 0:
 
     if start < goal:
+        # if x ==1:
+
         distance = goal - start
         if steps_right == 0:
             es = 1
@@ -45,6 +47,7 @@ while start != goal and es == 0:
     else:
         goal, start = start, goal
         steps_right, steps_left = steps_left, steps_right
+        x = 1
 
 
 if es == 1:
